@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import ErrorBoundary from './ErrorBoundary';
 import CustomerInfo from './components/customer-info'
 

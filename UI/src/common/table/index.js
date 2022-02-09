@@ -37,7 +37,7 @@ const Table = (props) => {
     const [ displayAdditonalDetails, setDisplayAdditionalDetails] = useState(false);
     const [ rowData, setRowData ] = useState ({});
     
-    const [showModal, setShowModal ] = useState(false);
+  
 
     const viewLinkRef = useRef(null);
     const modalRef = useRef(null);
@@ -100,13 +100,7 @@ const Table = (props) => {
         )
     }
 
-    const onOpenModal = () => {
-        setShowModal(true)
-    }
 
-    const onCloseModal = () => {
-        setShowModal(false)
-    }
 
     const onCloseAdditionalDetails = () => {
         setDisplayAdditionalDetails(false)
@@ -114,15 +108,10 @@ const Table = (props) => {
 
 
     const renderLightBox = (tbData) => {
-        const { image, lightBoxImage } = tbData;
         return (
             <LightBox 
-                onOpenModal={onOpenModal} 
-                onCloseModal={onCloseModal} 
-                showModal={showModal} 
                 modalRef={modalRef}
-                thumbNailUrl={image}
-                wideImageUrl={lightBoxImage}
+                tbData={tbData}
             />
         )
     }
@@ -131,7 +120,7 @@ const Table = (props) => {
 
     const renderTableValues = () => {
         return data.map((tbData) => {
-            return <tr className={`${blockName}__table-row`}>
+            return <tr className={`${blockName}__table-row`} key={tbData['customerId']}>
                 {Object.keys(tbData).map((key) => {
                     if (key === "additionalData"){
                         return <td className={sn(`${blockName}__table-data`)}>{renderViewMoreBtn(tbData)}</td>

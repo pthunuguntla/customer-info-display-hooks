@@ -1,6 +1,9 @@
 import { useState } from "react";
 
 import { Input, Button } from "../../common";
+import './search.scss';
+
+const blockName = 'search-wrapper'
 
 const Search = (props) => {
 
@@ -18,13 +21,14 @@ const Search = (props) => {
     }
 
     return (
-        <div>
+        <div className={blockName}>
             <Input
                 placeholder={"Search with user name"}
                 searchValue={searchValue}
                 onInputChange={onInputChange}
+                extraClasName={`${blockName}__input`}
             />
-            <Button name={'Submit'} onClick={()=>onClick()}/>
+            <Button name={'Submit'} onClick={()=>onClick()} extraClassName={`${blockName}__submit-btn`}/>
         </div>
 
 

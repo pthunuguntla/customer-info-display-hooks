@@ -12,9 +12,8 @@ const Select = (props) => {
 
 
     return (
-        <div className={sn(blockName, "form-group")}>
-            <select id="maxRows" onChange={(value) => onSelectChange(value)}>
-                <option value="5000">Show ALL Rows</option>
+        <div className={sn(blockName)}>
+            <select id="maxRows" onChange={(value) => onSelectChange(value)} className={`${blockName}__select`}>
                 <option value="5">5</option>
                 <option value="10">10</option>
                 <option value="15">15</option>

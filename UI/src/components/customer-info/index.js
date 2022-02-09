@@ -8,6 +8,10 @@ import { Table } from "../../common";
 
 import { tableHeaders, excludedHeaders } from "../../core/constants/tabledata"
 
+import "./customer-info.scss"
+
+
+const blockName  = "customer-info"
 
 const CustomerInfo = (props) => {
 
@@ -34,7 +38,7 @@ const CustomerInfo = (props) => {
     }
 
     return (
-        <>
+        <div className={blockName}>
             <Search onSubmitClick={onSubmitClick}/>
             <Table 
                 isPagination 
@@ -44,7 +48,7 @@ const CustomerInfo = (props) => {
                 userNameValue={userNameValue}
                 initialPageNumber={initialPageNumber}
             />
-        </>
+        </div>
 
     )
 }
