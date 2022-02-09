@@ -1,0 +1,38 @@
+.table-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    padding-left: 20px;
+
+     &__table {
+        width: 100%;
+
+        &-data {
+            text-align: center;
+        }
+
+        &-header {
+            text-align: center;
+            height: 50px;
+            background-color: #7fffd4
+            
+        } 
+     }
+
+    &__table tr{
+         &:nth-last-child(even) {
+            background-color: #d3d3d3
+        }
+    }
+ 
+    &__view-more{
+        background: none!important;
+        border: none;
+        color: #069;
+        text-decoration: underline;
+        cursor: pointer;
+        width: 40%;
+    }
+
+}

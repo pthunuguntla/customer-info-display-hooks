@@ -1,0 +1,53 @@
+.light-box {
+
+    &__modal {
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: black;
+
+        &-content {
+            position: relative;
+            margin: auto;
+            padding: 0;
+            width: 90%;
+            max-width: 1200px;
+        }
+    }
+
+    &__image-wide {
+        width: 100%;
+    }
+
+
+    &__image-normal {
+        width: 20%;
+    }
+
+
+    &__close {
+        color: white;
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        font-size: 35px;
+        font-weight: bold;
+
+        &:hover, :focus{
+            color: #999;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+    }
+
+    &__cursor {
+          cursor: pointer;
+    }
+
+}

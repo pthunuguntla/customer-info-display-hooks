@@ -1,0 +1,16 @@
+.additional-details {
+    width: 100%;
+    border: dashed;
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+        color: white;
+    }
+
+    &__title {
+        color: white;
+        margin-bottom: 20px;
+    }
+
+}

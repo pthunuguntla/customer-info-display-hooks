@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> with no props renders correctly  1`] = `
+<input
+  className="input"
+  onChange={[Function]}
+  placeholder="Type Something"
+  type="text"
+  value="test"
+/>
+`;
