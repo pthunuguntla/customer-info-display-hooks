@@ -18,7 +18,7 @@ once it gets success you could see the application has been started with port 30
 
 
 This Project is developed with 
-React Hooks as Front End
+React Hooks as Front End and
 Node as Back End
 
 Test cases are written in Jest with Enzyme
